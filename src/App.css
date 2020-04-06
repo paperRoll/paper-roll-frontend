@@ -61,11 +61,8 @@ nav a:first-child {
 
 .timesheet,
 .summary,
-.subscription {
+.profile {
   transition: opacity 0.5s ease-in;
-  overflow-x:auto;
-  /* position: absolute; */
-  /* width: 100%; */
 }
 
 h1 {
