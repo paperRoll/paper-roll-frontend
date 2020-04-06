@@ -1,0 +1,26 @@
+.logout {
+    width: 80px;
+    height: 40px;
+    right: -20px;
+    bottom: 0;
+    margin-bottom: 90px;
+    position: absolute;
+    z-index: 1;
+    background: #7ed386;
+    /* font-size: 1em; */
+    transform: rotate(-90deg);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .logout h1 {
+    color: #ffffff;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-left: 9px;
+  }
+  .logout:hover {
+    background: #3fb6a8;
+    transform: scale(1.1);
+  }

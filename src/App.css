@@ -17,44 +17,6 @@ body {
   box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5);
 }
 
-.logo {
-  position: absolute;
-  right: 18px;
-  top: 18px;
-  margin: 0;
-  font-family: "Nunito Sans", sans-serif;
-  color: #3dbb3d;
-  font-weight: 900;
-  font-size: 1.5em;
-  letter-spacing: 1px;
-}
-
-.logout {
-  width: 80px;
-  height: 40px;
-  right: -20px;
-  bottom: 0;
-  margin-bottom: 90px;
-  position: absolute;
-  z-index: 1;
-  background: #7ed386;
-  font-size: 1.1em;
-  transform: rotate(-90deg);
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-}
-
-.logout h1 {
-  color: #ffffff;
-  margin-top: 10px;
-  margin-left: 9px;
-}
-.logout:hover {
-  background: #3fb6a8;
-  transform: scale(1.1);
-}
-
 .leftbox {
   float: left;
   top: -4%;
@@ -92,18 +54,21 @@ nav a:first-child {
   height: 100%;
 }
 
+.rightbox .row{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .timesheet,
 .summary,
-.subscription {
+.profile {
   transition: opacity 0.5s ease-in;
-  position: absolute;
-  width: 70%;
 }
 
 h1 {
   font-family: "Montserrat", sans-serif;
   color: #7ed386;
-  font-size: 1em;
+  /* font-size: 1em; */
   margin-top: 40px;
   margin-bottom: 35px;
 }
@@ -131,7 +96,8 @@ p {
 }
 
 span {
-  font-size: 0.5em;
+  font-size: 17px;
+  font-weight: bold;
   color: #777777;
 }
 
@@ -156,30 +122,22 @@ input {
   margin: 0;
 }
 
-.privacy h2 {
-  margin-top: 25px;
-}
-
-.settings h2 {
-  margin-top: 25px;
-}
-
 .noshow {
   opacity: 0;
 }
 
-footer {
-  position: absolute;
-  width: 20%;
-  bottom: 0;
-  right: -5px;
-  text-align: right;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-family: "Roboto", sans-serif;
+table {
+  color: #777777;
+  height: 350px;
+  width: 100%;
+  border-spacing:0px;
 }
-footer p {
-  border: none;
-  padding: 0;
+
+th, td {
+  border-bottom: 1px solid #66C4B9;
+  font-size: 17px;
+}
+
+tr:hover {
+  background-color: rgb(218, 248, 214);
 }

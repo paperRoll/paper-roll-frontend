@@ -1,0 +1,13 @@
+.fileUpload input[type="file"] {
+    display: none;
+  }
+  
+  .fileUpload {
+    margin-left: 10%;
+    border: 3px solid #66C4B9;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    color: #777777;
+    font-weight: bold;
+  }
