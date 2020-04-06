@@ -5,12 +5,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
+import Logo from './components/Logo/Logo';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Logo />
       <App />
-      <Footer></Footer>
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

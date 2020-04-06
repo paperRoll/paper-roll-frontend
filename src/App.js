@@ -9,7 +9,6 @@ import Profile from './containers/Profile/Profile';
 
 import 'font-awesome/css/font-awesome.min.css';
 import Navigation from './components/Navigation/Navigation';
-import Footer from './components/Footer/Footer';
 
 function App() {
   let routes = (
@@ -22,17 +21,10 @@ function App() {
   )
   return (
     <div class="container">
-      <div id="logo">
-        <h1 class="logo">Paper Ro$$</h1>
-        <div class="logout">
-          <Logout></Logout>
-        </div>
-      </div>
-      
+      <Logout />
       <div class="leftbox"> 
         <Navigation/>
       </div>
-
       <div class="rightbox">
         {routes}
       </div>

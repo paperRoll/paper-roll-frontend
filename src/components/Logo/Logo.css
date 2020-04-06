@@ -1,0 +1,12 @@
+.logo {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif;
+    /* color: #3dbb3d; */
+    color: white;
+    font-weight: 900;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+  }
