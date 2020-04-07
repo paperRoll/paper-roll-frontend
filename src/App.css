@@ -7,7 +7,7 @@ body {
   background: linear-gradient(to right, #3fb6a8, #7ed386);
 }
 
-.container {
+.app-container {
   background: #ffffff;
   width: 94%;
   height: 88%;
@@ -129,13 +129,15 @@ input {
 table {
   color: #777777;
   height: 350px;
-  width: 100%;
+  width: 95%;
   border-spacing:0px;
+  margin-left: 2%;
 }
 
 th, td {
   border-bottom: 1px solid #66C4B9;
   font-size: 17px;
+  padding-right: 3%;
 }
 
 tr:hover {
