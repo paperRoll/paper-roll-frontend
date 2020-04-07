@@ -1,6 +1,7 @@
 .profile-content {
     height: 100%;
     width: 100%;
+    margin-left: 120px;
   }
   .profile-content h1 {
     font-family: "Montserrat", sans-serif;
@@ -18,13 +19,16 @@
     letter-spacing: 1px;
     margin-left: 2px;
   }
-
+  .profile-content-onedit p {
+    border-style: groove;
+  }
   .profile-pic {
     flex: 1;
     height: 100%;
     width: 100%;
   }
   .profile-content input {
+    line-height: 2.22;
     border-width: 2px;
     border-style: solid;
     /* border-image: linear-gradient(to right, #3fb6a8, rgba(126, 211, 134, 0.5)) 1 0%; */
@@ -47,8 +51,4 @@
     font-size: 15px;
     border: none;
     color: #3fb6a8;
-  }
-  
-input.space {
-    line-height: 2.2;
   }
