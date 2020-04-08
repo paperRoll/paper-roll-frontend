@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Week from './Week/Week';
-import Weekday from './Weekday/Weekday';
-import Time from './Time/Time';
-import DayHour from './DayHour/DayHour';
 import Hour from './TotalHours/Hour';
-import NonWorkdays from './NonWorkdays/NonWorkdays';
 import File from './File/File';
 import Buttons from './Buttons/Buttons';
+import Table from './Table/Table';
 
 class Timesheet extends Component {
     render() {
@@ -19,10 +16,7 @@ class Timesheet extends Component {
                     <Hour></Hour>
                 </div>
                 <div className="row">
-                    <Weekday></Weekday>
-                    <Time></Time>
-                    <DayHour></DayHour>
-                    <NonWorkdays></NonWorkdays>
+                    <Table></Table>
                 </div>
                 <div className="row">
                     <File></File>
