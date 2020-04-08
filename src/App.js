@@ -20,7 +20,7 @@ function App() {
     </Switch>
   )
   return (
-    <div class="container">
+    <div class="app-container">
       <Logout />
       <div class="leftbox"> 
         <Navigation/>
