@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Time.css';
 
 class Time extends Component {
     constructor(props) {
@@ -18,13 +19,16 @@ class Time extends Component {
         })
 
         this.state = {
-            times: times
+            times: times,
+            selectedValue: props.time
         }
     }
-    
+
     render() {
         return (
-            <select>
+            <select className="select" 
+                // value={this.state.selectedValue}
+                >
                 {this.state.times}
             </select>
         )

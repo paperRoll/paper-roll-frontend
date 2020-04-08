@@ -37,6 +37,46 @@ class Table extends Component {
                 ifFloating: false,
                 ifHoliday: false,
                 ifVacation: false
+            },
+            {
+                day: "Wednesday",
+                date: "2020-01-04",
+                start: "9 AM",
+                end: "6 AM",
+                totalHours: 8,
+                ifFloating: false,
+                ifHoliday: false,
+                ifVacation: false
+            },
+            {
+                day: "Thursday",
+                date: "2020-01-05",
+                start: "9 AM",
+                end: "6 AM",
+                totalHours: 7,
+                ifFloating: false,
+                ifHoliday: false,
+                ifVacation: false
+            },
+            {
+                day: "Friday",
+                date: "2020-01-06",
+                start: "9 AM",
+                end: "6 AM",
+                totalHours: 8,
+                ifFloating: false,
+                ifHoliday: false,
+                ifVacation: false
+            },
+            {
+                day: "Saturday",
+                date: "2020-01-07",
+                start: "N/A",
+                end: "N/A",
+                totalHours: 8,
+                ifFloating: false,
+                ifHoliday: false,
+                ifVacation: false
             }
         ]
 
@@ -47,7 +87,7 @@ class Table extends Component {
     render() {
         const rows = this.state.weekdays.map((day) => (
             <Row day={day.day} date={day.date} start={day.start} end={day.end} totalHours={day.totalHours}
-                idFloating={day.ifFloating} ifHoliday={day.ifHoliday} ifVacation={day.ifVacation}/>
+                ifFloating={day.ifFloating} ifHoliday={day.ifHoliday} ifVacation={day.ifVacation}/>
         ))
 
         return (
