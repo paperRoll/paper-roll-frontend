@@ -8,7 +8,7 @@ import Footer from '../../components/Footer/Footer';
 import Logout from '../../components/Logout/Logout';
 import Summary from '../Summary/Summary/Summary';
 import Timesheet from '../Timesheet/Timesheet';
-import Profile from '../Profile/Profile';
+import Profile from '../Profile/Profile/Profile';
 
 import Navigation from '../../components/Navigation/Navigation';
 import Header from '../../components/Header/Header';

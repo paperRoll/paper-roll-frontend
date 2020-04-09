@@ -1,0 +1,76 @@
+.profile {
+  transition: opacity 0.5s ease-in;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.profile h1 {  
+  font-family: "Montserrat", sans-serif;
+  color: #00487C;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.profile .desc {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75em;
+  color: #cfcfcf;
+}
+
+
+.profile .title {
+  font-family: "Montserrat", sans-serif;
+  color: #7ed386;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.profile .subtitle {
+  font-family: "Montserrat", sans-serif;
+  color: #7ed386;
+  font-size: 0.7em;
+  margin-bottom: 2px;
+}
+
+.profile .info {
+  font-size: 0.9em;
+  color: #3c3c3c;
+  margin-bottom: 10px;
+}
+
+.profile-btn {
+  padding: 0;
+  outline: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #3fb6a8;
+  text-decoration: underline;
+}
+
+.profile-btn:hover {
+  color: #00487C;
+}
+
+.profile-btn:focus {
+  outline: none;
+}
+
+.profile input {
+  border: none;
+  border-bottom: 1px solid #3c3c3c;
+  width: 80%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  padding: 2px 5px;
+  margin-bottom: 10px;
+  color: #070707;
+}
+  
+.profile input::placeholder {
+  font-style: oblique;
+}

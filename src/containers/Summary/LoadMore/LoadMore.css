@@ -1,10 +1,12 @@
 .loadmore {
-  color: #7ed386;
-  text-decoration: underline;
-  background: transparent;
+  padding: 0;
+  outline: none;
   border: none;
   font-family: "Roboto", sans-serif;
-  outline: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #3fb6a8;
+  text-decoration: underline;
 }
 
 .loadmore:focus {
@@ -12,5 +14,5 @@
 }
 
 .loadmore:hover {
-  color: #3fb6a8;
+  color: #00487C;
 }

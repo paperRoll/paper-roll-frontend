@@ -43,9 +43,7 @@ body {
   margin-bottom: 15px;
 }
 
-.timesheet,
-.summary,
-.profile {
+.timesheet {
   transition: opacity 0.5s ease-in;
   height: 100%;
   width: 100%;
@@ -53,9 +51,7 @@ body {
   padding: 1.5em;
 }
 
-.timesheet h1,
-.profile h1,
-.summary h1 {
+.timesheet h1 {
   font-family: "Montserrat", sans-serif;
   color: #7ed386;
   font-size: 1.6em;

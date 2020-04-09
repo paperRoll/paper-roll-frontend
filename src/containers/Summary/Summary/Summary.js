@@ -77,24 +77,35 @@ class Summary extends Component {
   render() {
     return (
       <div className="summary">
-        <h1>Summary</h1>
         <div className="my-4">
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>Week Ending</th>
-              <th>Total Hours</th>
-              <th>Submission Status</th>
-              <th>Approval Status</th>
-              <th>Option</th>
-              <th>Comment</th>
-            </tr>
-          </thead>
-          <tbody>{this.state.summaries.map(renderSummary)}</tbody>
-        </Table>
+          <h1>Summary</h1>
+          <p className="desc m-0">
+            The following table shows your timesheet history that has been recorded in the system.
+          </p>
+          <p className="desc m-0">
+            Notice: The total hours represent the number of billing hours*, not compensated hours* entered into the system.
+          </p>
+        </div>
+
+        <div className="my-4">
+          <Table striped bordered hover>
+            <thead>
+              <tr>
+                <th>Week Ending</th>
+                <th>Total Hours</th>
+                <th>Submission Status</th>
+                <th>Approval Status</th>
+                <th>Option</th>
+                <th>Comment</th>
+              </tr>
+            </thead>
+            <tbody>{this.state.summaries.map(renderSummary)}</tbody>
+          </Table>
         </div>
         
-        <LoadMore></LoadMore>
+        <div className="my-4">
+          <LoadMore />
+        </div>
       </div>
     );
   }
