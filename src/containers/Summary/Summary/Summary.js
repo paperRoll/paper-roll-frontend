@@ -7,42 +7,42 @@ import LoadMore from "../LoadMore/LoadMore";
 import './Summary.css';
 import { Link } from "react-router-dom";
 
-const summaries = [
-  {
-    weekEnding: "3/24/2018",
-    totalHours: 40,
-    submissionStatus: "Complete",
-    approvalStatus: "Not approved",
-    comment: "1 floating day required",
-  },
-  {
-    weekEnding: "3/17/2018",
-    totalHours: 40,
-    submissionStatus: "Complete",
-    approvalStatus: "Not approved",
-    comment: "1 floating day required",
-  },
-  {
-    weekEnding: "3/10/2018",
-    totalHours: 40,
-    submissionStatus: "Complete",
-    approvalStatus: "Not approved",
-    comment: "1 floating day required",
-  },
-  {
-    weekEnding: "3/03/2018",
-    totalHours: 40,
-    submissionStatus: "Complete",
-    approvalStatus: "Not approved",
-    comment: "1 floating day required",
-  }
-];
+// const summaries = [
+//   {
+//     weekEnding: "3/24/2018",
+//     totalHours: 40,
+//     submissionStatus: "Complete",
+//     approvalStatus: "Not approved",
+//     comment: "1 floating day required",
+//   },
+//   {
+//     weekEnding: "3/17/2018",
+//     totalHours: 40,
+//     submissionStatus: "Complete",
+//     approvalStatus: "Not approved",
+//     comment: "1 floating day required",
+//   },
+//   {
+//     weekEnding: "3/10/2018",
+//     totalHours: 40,
+//     submissionStatus: "Complete",
+//     approvalStatus: "Not approved",
+//     comment: "1 floating day required",
+//   },
+//   {
+//     weekEnding: "3/03/2018",
+//     totalHours: 40,
+//     submissionStatus: "Complete",
+//     approvalStatus: "Not approved",
+//     comment: "1 floating day required",
+//   }
+// ];
 
 const renderSummary = (summary, index) => {
   return (
     <tr key={index}>
       <td>{summary.weekEnding}</td>
-      <td>{summary.totalHours}</td>
+      <td>{summary.totalBillingHours}</td>
       <td>
         <div className="d-flex">
           <span className="mr-2 disable-select">{summary.submissionStatus}</span>
@@ -70,8 +70,26 @@ class Summary extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      summaries : summaries
+      summaries : []
     }
+  }
+
+  componentDidMount() {
+    const summaryRequest = {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json',
+                 employeeId: 1 },
+    }
+    const url = 'summary/fetch-summary';
+
+    fetch(url, summaryRequest)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          summaries : data.summaryRecords
+        })
+        console.log(data)
+      });
   }
 
   render() {
