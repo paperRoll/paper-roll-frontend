@@ -25,3 +25,15 @@
   border-left: 1px solid #F3F5F9;
   border-right: 1px solid #F3F5F9;
 }
+
+.cell {
+  height: 100%;
+  width: 100%;
+}
+
+.day-hour {
+  padding: 5px;
+  font-size: 1em;
+  height: 24px;
+  width: 50px;
+}

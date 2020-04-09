@@ -79,7 +79,7 @@ class Time extends Component {
   render() {
     return (
       <select
-        className="select"
+        className="select form-control"
         // value={this.state.selectedValue}
       >
         {this.state.times}

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Table } from "react-bootstrap";
 
 import Time from './Time/Time';
-import DayHour from './DayHour/DayHour';
 
 import './RecordTable.css';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -64,7 +63,7 @@ const weekdays = [
     start: "9 AM",
     end: "6 AM",
     totalHours: 8,
-    ifFloating: false,
+    ifFloating: true,
     ifHoliday: false,
     ifVacation: false,
   },
@@ -80,21 +79,6 @@ const weekdays = [
   },
 ];
 
-const renderDayRecord = (dayRecord, index) => {
-  return (
-    <tr key={index}>
-        <td>{dayRecord.day}</td>
-        <td>{dayRecord.date}</td>
-        <td><Time time={dayRecord.start} /></td>
-        <td><Time time={dayRecord.end} /></td>
-        <td><DayHour totalHours={dayRecord.totalHours}></DayHour></td>
-        <td>{dayRecord.ifFloating}</td>
-        <td>{dayRecord.ifHoliday}</td>
-        <td>{dayRecord.ifVacation}</td>
-    </tr>
-  )
-}
-
 class RecordTable extends Component {
 
   constructor(props) {
@@ -102,6 +86,72 @@ class RecordTable extends Component {
     this.state = {
       weekdays : weekdays
     }
+  }
+
+  renderDayRecord = (dayRecord, index) => {
+    return (
+      <tr key={index}>
+        <td>
+          <div className="d-flex cell">
+            <span class="my-auto">
+              {dayRecord.day}
+            </span>
+          </div>
+        </td>
+        <td>
+          <div className="d-flex cell">
+            <span class="my-auto">
+              {dayRecord.date}
+            </span>
+          </div>
+        </td>
+        <td><Time time={dayRecord.start} /></td>
+        <td><Time time={dayRecord.end} /></td>
+        <td>
+          <input 
+            type="text" 
+            className="day-hour form-control" 
+            name="hours"
+            value={dayRecord.totalHours} 
+            onChange={(e) => this.onTotalHoursEnter()}/>
+        </td>
+        <td>
+          <div className="d-flex cell">
+            <input 
+              type="checkbox"
+              className="my-auto"
+              checked={dayRecord.ifFloating}
+              onChange={(e) => {this.onNoWorkingClick(e, index)} }/>
+          </div>
+        </td>
+        <td>
+          <div className="d-flex cell">
+            <input 
+              type="checkbox"
+              className="my-auto"
+              checked={dayRecord.ifHoliday}
+              onChange={(e) => {this.onNoWorkingClick(e, index)} }/>
+          </div>
+        </td>
+        <td>
+          <div className="d-flex cell">
+            <input 
+              type="checkbox"
+              className="my-auto"
+              checked={dayRecord.ifVacation}
+              onChange={(e) => {this.onNoWorkingClick(e, index)} }/>
+          </div>
+        </td>
+      </tr>
+    )
+  }
+
+  onTotalHoursEnter() {
+    
+  }
+
+  onNoWorkingClick(e) {
+
   }
 
   render() {
@@ -120,7 +170,7 @@ class RecordTable extends Component {
               <th>Vacation</th>
             </tr>
           </thead>
-          <tbody>{this.state.weekdays.map(renderDayRecord)}</tbody>
+          <tbody>{this.state.weekdays.map(this.renderDayRecord)}</tbody>
         </Table>
       </div>
       
