@@ -11,6 +11,39 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './Timesheet.css';
 
 class Timesheet extends Component {
+  constructor() {
+    super();
+    this.state = {
+      weekEnding: "",
+      totalBillingHours: 0, 
+      totalCompensatedHours: 0,
+      dailyRecords : []
+    }
+  }
+
+  componentWillMount() {
+    const summaryRequest = {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json',
+                 employeeId: 1,
+                 curDate: "2018-03-30"
+                },
+    }
+    const url = 'timesheet/fetch-weekly-record';
+
+    fetch(url, summaryRequest)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        this.setState({
+          weekEnding : data.weekEnding,
+          totalBillingHours : data.totalBillingHours,
+          totalCompensatedHours : data.totalCompensatedHours,
+          dailyRecords : data.dailyRecords
+        }) 
+      });
+  }
+
   render() {
     return (
       <div className="timesheet">
