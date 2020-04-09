@@ -84,7 +84,7 @@ class RecordTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      weekdays : weekdays
+      weekdays : props.weekdays === undefined ? weekdays : props.weekdays
     }
   }
 
@@ -93,14 +93,14 @@ class RecordTable extends Component {
       <tr key={index}>
         <td>
           <div className="d-flex cell">
-            <span class="my-auto">
+            <span className="my-auto">
               {dayRecord.day}
             </span>
           </div>
         </td>
         <td>
           <div className="d-flex cell">
-            <span class="my-auto">
+            <span className="my-auto">
               {dayRecord.date}
             </span>
           </div>
