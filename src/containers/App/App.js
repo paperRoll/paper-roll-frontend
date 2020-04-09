@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-import 'font-awesome/css/font-awesome.min.css';
-import './App.css';
-
-import Footer from '../../components/Footer/Footer';
-import Logout from '../../components/Logout/Logout';
-import Summary from '../Summary/Summary/Summary';
-import Timesheet from '../Timesheet/Timesheet';
-import Profile from '../Profile/Profile/Profile';
-
 import Navigation from '../../components/Navigation/Navigation';
 import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import Logout from '../../components/Logout/Logout';
+
+import Summary from '../Summary/Summary/Summary';
+import Timesheet from '../Timesheet/Timesheet/Timesheet';
+import Profile from '../Profile/Profile/Profile';
+
+import 'font-awesome/css/font-awesome.min.css';
+import './App.css';
 
 const routes = (
   <Switch>

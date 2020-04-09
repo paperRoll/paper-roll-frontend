@@ -1,0 +1,27 @@
+.timesheet table {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75em;
+  margin: 0;
+}
+
+.timesheet thead th {
+  border-bottom: 1px solid #F3F5F9;
+}
+
+.timesheet th, .timesheet td {
+  border-color: #F3F5F9;
+  padding: 0.65em;
+}
+
+.timesheet .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0,0,0,.02);
+}
+
+.timesheet tr:last-child {
+  border-bottom: 1px solid #F3F5F9;
+}
+
+.timesheet tr {
+  border-left: 1px solid #F3F5F9;
+  border-right: 1px solid #F3F5F9;
+}

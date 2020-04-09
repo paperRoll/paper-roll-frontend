@@ -1,0 +1,8 @@
+.calander {
+  font-size: 0.9em;
+}
+
+.calander input{
+  height: 30px;
+  width: 170px;
+}
