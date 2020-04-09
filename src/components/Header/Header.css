@@ -1,0 +1,20 @@
+header {
+  display: flex !important;
+  align-items: flex-end;
+  padding-bottom: 5px;
+  justify-content: center;
+}
+
+.logo {
+  height: 27px;
+  width: 27spx;
+}
+
+.title {
+    margin: 0;
+    font-family: 'Montez', cursive;
+    color: #05668D;
+    font-weight: 900;
+    font-size: 27px;;
+    letter-spacing: 1px;
+  }

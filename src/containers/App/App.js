@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
+
+import 'font-awesome/css/font-awesome.min.css';
 import './App.css';
 
 import Footer from '../../components/Footer/Footer';
-import Logo from '../../components/Logo/Logo';
 import Logout from '../../components/Logout/Logout';
 import Summary from '../Summary/Summary';
 import Timesheet from '../Timesheet/Timesheet';
 import Profile from '../Profile/Profile';
 
-import 'font-awesome/css/font-awesome.min.css';
 import Navigation from '../../components/Navigation/Navigation';
+import Header from '../../components/Header/Header';
 
 const routes = (
   <Switch>
@@ -25,19 +26,21 @@ class App extends Component {
 
   render() {
     return (
-      <div class="app-container">
-         <Logo />
-
-        <Logout />
-        <div class="leftbox"> 
-          <Navigation/>
+      <div className="wrapper d-flex flex-column">
+        <Header className="header" />
+        <div className="app-container">
+          {/* <Logout />
+          <div className="leftbox"> 
+            <Navigation/>
+          </div>
+          <div className="rightbox">
+            {routes}
+          </div> */}
         </div>
-        <div class="rightbox">
-          {routes}
-        </div>
-        <Footer />
+        <Footer className="footer" />
 
       </div>
+      
 
     );
   }
