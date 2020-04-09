@@ -1,0 +1,8 @@
+.hours {
+  font-size: 0.9em;
+}
+
+.hours input {
+  height: 30px;
+  width: 50px;
+}

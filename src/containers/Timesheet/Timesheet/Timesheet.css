@@ -1,0 +1,21 @@
+.timesheet {
+  transition: opacity 0.5s ease-in;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.timesheet h1 {  
+  font-family: "Montserrat", sans-serif;
+  color: #00487C;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.timesheet .desc {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75em;
+  color: #cfcfcf;
+}

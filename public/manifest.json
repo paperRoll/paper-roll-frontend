@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Paper Roll",
+  "name": "Paper Roll Employee Timesheet System",
   "icons": [
     {
       "src": "favicon.ico",

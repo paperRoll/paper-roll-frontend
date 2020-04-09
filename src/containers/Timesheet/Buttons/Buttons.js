@@ -1,19 +1,26 @@
-import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Save from './Save/Save';
-import SetDefault from './SetDefault/SetDefault';
+import React, { Component } from "react";
+
+import "./Buttons.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class Buttons extends Component {
-    render() {
-        return(
-            <div class="col-md-5" className="save">
-                <div class="row">
-                    <SetDefault></SetDefault>
-                    <Save></Save>
-                </div>
-            </div>
-        )
-    }
+
+  onSetDefaultClick() {
+
+  }
+
+  onSaveClick() {
+
+  }
+
+  render() {
+    return (
+      <div className="d-flex mr-5">
+        <button className="btn mr-3">SET DEFAULT</button>
+        <button className="btn">SAVE</button>
+      </div>
+    );
+  }
 }
 
 export default Buttons;

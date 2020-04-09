@@ -1,0 +1,91 @@
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Time.css";
+
+const items = [
+  "N/A",
+  "0:30 AM",
+  "1 AM",
+  "1:30 AM",
+  "2 AM",
+  "2:30 AM",
+  "3 AM",
+  "3:30 AM",
+  "4 AM",
+  "4:30 AM",
+  "5 AM",
+  "5:30 AM",
+  "6 AM",
+  "6:30 AM",
+  "7 AM",
+  "7:30 AM",
+  "8 AM",
+  "8:30 AM",
+  "9 AM",
+  "9:30 AM",
+  "10 AM",
+  "10:30 AM",
+  "11 AM",
+  "11:30 AM",
+  "12 AM",
+  "12:30 PM",
+  "1 PM",
+  "1:30 PM",
+  "2 PM",
+  "2:30 PM",
+  "3 PM",
+  "3:30 PM",
+  "4 PM",
+  "4:30 PM",
+  "5 PM",
+  "5:30 PM",
+  "6 PM",
+  "6:30 PM",
+  "7 PM",
+  "7:30 PM",
+  "8 PM",
+  "8:30 PM",
+  "9 PM",
+  "9:30 PM",
+  "10 PM",
+  "10:30 PM",
+  "11 PM",
+  "11:30 PM",
+  "12 PM",
+];
+
+class Time extends Component {
+  constructor(props) {
+    super(props);
+
+    const times = items.map((item, index) => {
+      let option = <option value={item} key={index}>{item}</option>;
+      if (item === props.time) {
+        option = (
+          <option value={item} defaultValue key={index}>
+            {item}
+          </option>
+        );
+      }
+      return option;
+    });
+
+    this.state = {
+      times: times,
+      selectedValue: props.time,
+    };
+  }
+
+  render() {
+    return (
+      <select
+        className="select form-control"
+        // value={this.state.selectedValue}
+      >
+        {this.state.times}
+      </select>
+    );
+  }
+}
+
+export default Time;

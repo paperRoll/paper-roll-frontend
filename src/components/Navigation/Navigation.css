@@ -1,0 +1,44 @@
+.nav-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar .sidebar-item,
+.sidebar .sidebar-item:hover {
+  text-decoration: none;
+}
+
+.sidebar, .split-line {
+  margin: 1.5em 0;
+}
+
+.split-line {
+  border-right: 1px solid #F3F5F9;
+}
+
+.sidebar .sidebar-item {
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  padding: 1.5em 1.3em;
+  color: #A7E2E3;
+  font-size: 1.2em;
+  display: block;
+  transition: all 200ms ease-in-out;
+}
+
+@media(min-width: 576px) {
+  .sidebar .sidebar-item {
+    font-size: 1em;
+  }
+}
+
+.sidebar .sidebar-item:hover {
+  color: #3fb6a8;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.active {
+  color: #427AA1 !important;
+  font-weight: 500;
+}

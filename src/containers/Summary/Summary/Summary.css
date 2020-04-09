@@ -1,0 +1,51 @@
+.summary {
+  transition: opacity 0.5s ease-in;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.summary h1 {  
+  font-family: "Montserrat", sans-serif;
+  color: #00487C;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.summary .desc {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75em;
+  color: #cfcfcf;
+}
+
+.summary table {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  margin: 0;
+}
+
+.summary thead th {
+  border-bottom: 1px solid #F3F5F9;
+}
+
+.summary th, .summary td {
+  border-color: #F3F5F9;
+}
+
+.summary .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0,0,0,.02);
+}
+
+.option {
+  border: none;
+  color: #427AA1;
+  background: transparent;
+  text-decoration: underline;
+  outline: none;
+}
+
+.option:focus {
+  outline: none;
+}
