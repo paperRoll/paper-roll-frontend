@@ -5,7 +5,7 @@ import './NonWorkdays.css';
 class NonWorkdays extends Component {
     render() {
         return (
-            <div class="col-md-4">
+            <div className="col-md-4">
                 <table>
                     <thead>
                         <tr>
@@ -17,17 +17,17 @@ class NonWorkdays extends Component {
                     <tbody>
                         <tr>
                             <td>
-                                <label for="floating">
+                                <label htmlFor="floating">
                                     <input type="radio" id="floating" name="nonworkday" value="floating"/>
                                 </label>
                             </td>
                             <td>
-                                <label for="vacation">
+                                <label htmlFor="vacation">
                                     <input type="radio" id="vacation" name="nonworkday" value="vacation"/>
                                 </label>
                             </td>
                             <td>
-                                <label for="holiday">
+                                <label htmlFor="holiday">
                                     <input type="radio" id="holiday" name="nonworkday" value="holiday"/>
                                 </label>
                             </td>

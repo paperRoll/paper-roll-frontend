@@ -15,7 +15,7 @@ class Buttons extends Component {
 
   render() {
     return (
-      <div class="d-flex mr-5">
+      <div className="d-flex mr-5">
         <button className="btn mr-3">SET DEFAULT</button>
         <button className="btn">SAVE</button>
       </div>

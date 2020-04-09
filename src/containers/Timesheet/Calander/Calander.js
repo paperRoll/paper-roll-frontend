@@ -14,15 +14,22 @@ class Calander extends Component {
     }
   }
 
-  dateChange() {
-    // TODO
+  dateChange(e) {
+    this.setState({
+      date: e.target.value
+    });
   }
 
   render() {
     return (
       <div className="calander d-flex form-group my-auto">
-        <label for="date" className="mr-2 my-auto">Week Ending:</label>
-        <input type="date" className="form-control" value={this.state.date} id="date" name="date"/>
+        <label htmlFor="date" className="mr-2 my-auto">Week Ending:</label>
+        <input 
+          type="date" 
+          className="form-control" 
+          value={this.state.date} 
+          onChange={(e)=>{this.dateChange(e)}} 
+          id="date" name="date"/>
       </div>
     );
   }

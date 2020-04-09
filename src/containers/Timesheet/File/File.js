@@ -4,9 +4,9 @@ import "./File.css";
 class File extends Component {
   render() {
     return (
-      <div class="d-flex">
-        <div class="form-group mr-3 my-auto">
-          <select class="form-control approve">
+      <div className="d-flex">
+        <div className="form-group mr-3 my-auto">
+          <select className="form-control approve">
             <option value="Approved Timesheet">Approved Timesheet</option>
             <option value="Unapproved Timesheet">Unapproved Timesheet</option>
           </select>
