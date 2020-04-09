@@ -9,7 +9,7 @@
 }
 
 .sidebar, .split-line {
-  margin: 40px 0;
+  margin: 1.5em 0;
 }
 
 .split-line {
@@ -27,7 +27,6 @@
 }
 
 @media(min-width: 576px) {
-
   .sidebar .sidebar-item {
     font-size: 1em;
   }
@@ -41,4 +40,5 @@
 
 .active {
   color: #427AA1 !important;
+  font-weight: 500;
 }
