@@ -18,7 +18,7 @@ const routes = (
     <Route path='/summary' component={Summary}></Route>
     <Route path='/timesheet' component={Timesheet}></Route>
     <Route path='/profile' component={Profile}></Route>
-    <Redirect to="/" />
+    <Redirect exact from="/" to="/summary" />
   </Switch>
 );
 
@@ -29,13 +29,13 @@ class App extends Component {
       <div className="wrapper d-flex flex-column">
         <Header className="header" />
         <div className="app-container">
-          {/* <Logout />
+          <Logout />
           <div className="leftbox"> 
             <Navigation/>
           </div>
           <div className="rightbox">
-            {routes}
-          </div> */}
+            {/* {routes} */}
+          </div>
         </div>
         <Footer className="footer" />
 

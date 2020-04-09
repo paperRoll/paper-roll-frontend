@@ -16,7 +16,7 @@ body {
 
 .app-container {
   background: #ffffff;
-  width: 94%;
+  width: 93%;
   height: 82%;
   margin: auto;
   position: relative;
@@ -30,38 +30,10 @@ body {
 }
 
 .leftbox {
-  float: left;
-  top: -4%;
-  left: 30px;
-  position: absolute;
-  width: 120px;
-  height: 108%;
-  background: #7ed386;
-  box-shadow: 3px 3px 10px rgba(119, 119, 119, 0.5);
-}
-
-nav a{
-  list-style: none;
-  padding: 35px;
-  color: #ffffff;
-  font-size: 2em;
-  display: block;
-  transition: all 0.3s ease-in-out;
-}
-nav a:hover {
-  color: #3fb6a8;
-  transform: scale(1.2);
-  cursor: pointer;
-}
-nav a:first-child {
-  margin-top: 7px;
-}
-.active {
-  color: #3fb6a8;
+  /* background: #7ed386; */
 }
 
 .rightbox {
-  margin-left: 170px;
   flex: 1;
   height: 100%;
 }
