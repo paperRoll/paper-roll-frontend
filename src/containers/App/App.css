@@ -47,14 +47,18 @@ body {
 .summary,
 .profile {
   transition: opacity 0.5s ease-in;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding: 1.5em;
 }
 
-h1 {
+.timesheet h1,
+.profile h1,
+.summary h1 {
   font-family: "Montserrat", sans-serif;
   color: #7ed386;
-  /* font-size: 1em; */
-  margin-top: 40px;
-  margin-bottom: 35px;
+  font-size: 1.6em;
 }
 
 h2 {
@@ -92,20 +96,10 @@ input {
   opacity: 0;
 }
 
-table {
-  color: #777777;
-  height: 350px;
-  width: 95%;
-  border-spacing:0px;
-  margin-left: 2%;
+.cursor-pointer {
+  cursor: pointer;
 }
 
-th, td {
-  border-bottom: 1px solid #66C4B9;
-  font-size: 17px;
-  padding-right: 3%;
-}
-
-tr:hover {
-  background-color: rgb(218, 248, 214);
+.disable-select{
+  user-select:none;
 }

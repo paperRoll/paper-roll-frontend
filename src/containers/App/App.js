@@ -6,7 +6,7 @@ import './App.css';
 
 import Footer from '../../components/Footer/Footer';
 import Logout from '../../components/Logout/Logout';
-import Summary from '../Summary/Summary';
+import Summary from '../Summary/Summary/Summary';
 import Timesheet from '../Timesheet/Timesheet';
 import Profile from '../Profile/Profile';
 
@@ -34,7 +34,7 @@ class App extends Component {
             <Navigation/>
           </div>
           <div className="rightbox">
-            {/* {routes} */}
+            {routes}
           </div>
         </div>
         <Footer className="footer" />

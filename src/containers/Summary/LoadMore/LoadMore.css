@@ -1,3 +1,16 @@
-.loadmore{
-    text-align: center;
+.loadmore {
+  color: #7ed386;
+  text-decoration: underline;
+  background: transparent;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+}
+
+.loadmore:focus {
+  outline: none;
+}
+
+.loadmore:hover {
+  color: #3fb6a8;
 }

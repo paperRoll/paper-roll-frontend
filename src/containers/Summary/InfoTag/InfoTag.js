@@ -23,11 +23,11 @@ function useHover() {
 
 function InfoTag() {
 
-    const [ref, hovered] = useHover()
+    const [ref, hovered] = useHover();
 
     return (
         <div>
-            <span  style={{fontFamily: "Italics"}}class="badge badge-pill badge-info" ref={ref}>i</span>
+            <span  style={{fontFamily: "Italics"}} className="badge badge-pill badge-info cursor-pointer" ref={ref}>i</span>
             {hovered && <div>Hi!</div>}
         </div>
         
