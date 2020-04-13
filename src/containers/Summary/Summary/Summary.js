@@ -39,6 +39,8 @@ import { Link } from "react-router-dom";
 // ];
 
 const renderSummary = (summary, index) => {
+  const url = `/timesheet?empoyeeId=1&curDate=${summary.weekEnding}`;
+
   return (
     <tr key={index}>
       <td>{summary.weekEnding}</td>
@@ -51,7 +53,7 @@ const renderSummary = (summary, index) => {
       </td>
       <td className="disable-select">{summary.approvalStatus}</td>
       <td>
-        <Link className="option" to="/">
+        <Link className="option" to={url}>
           {summary.approvalStatus === "Approved" ? "View" : "Edit"}
         </Link>
       </td>

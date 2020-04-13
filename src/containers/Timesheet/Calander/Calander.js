@@ -10,7 +10,7 @@ class Calander extends Component {
     const now = new Date().toISOString().split("T")[0];
 
     this.state = {
-      date: props.calanderDate === undefined ? now : props.date
+      date: props.calanderDate === undefined ? now : props.calanderDate
     }
   }
 

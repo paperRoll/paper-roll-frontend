@@ -10,14 +10,94 @@ import RecordTable from "../RecordTable/RecordTable";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Timesheet.css';
 
+const weekdays = [
+  {
+    day: "Sunday",
+    date: "2020-01-01",
+    start: "N/A",
+    end: "N/A",
+    totalHours: 0,
+    ifFloating: false,
+    ifHoliday: false,
+    ifVacation: false,
+  },
+  {
+    day: "Monday",
+    date: "2020-01-02",
+    start: "9 AM",
+    end: "6 AM",
+    totalHours: 8,
+    ifFloating: false,
+    ifHoliday: false,
+    ifVacation: false,
+  },
+  {
+    day: "Tuesday",
+    date: "2020-01-03",
+    start: "10 AM",
+    end: "6 AM",
+    totalHours: 7,
+    ifFloating: false,
+    ifHoliday: false,
+    ifVacation: false,
+  },
+  {
+    day: "Wednesday",
+    date: "2020-01-04",
+    start: "9 AM",
+    end: "6 AM",
+    totalHours: 8,
+    ifFloating: false,
+    ifHoliday: false,
+    ifVacation: false,
+  },
+  {
+    day: "Thursday",
+    date: "2020-01-05",
+    start: "9 AM",
+    end: "6 AM",
+    totalHours: 7,
+    ifFloating: false,
+    ifHoliday: false,
+    ifVacation: false,
+  },
+  {
+    day: "Friday",
+    date: "2020-01-06",
+    start: "9 AM",
+    end: "6 AM",
+    totalHours: 8,
+    ifFloating: true,
+    ifHoliday: false,
+    ifVacation: false,
+  },
+  {
+    day: "Saturday",
+    date: "2020-01-07",
+    start: "N/A",
+    end: "N/A",
+    totalHours: 8,
+    ifFloating: false,
+    ifHoliday: false,
+    ifVacation: false,
+  },
+];
+
 class Timesheet extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    let search = this.props.location.search;
+    let params = new URLSearchParams(search);
+    let curDate = params.get('curDate');
+    const now = new Date().toISOString().split("T")[0];
+
     this.state = {
+      curDate : curDate === null ? now : curDate,
       weekEnding: "",
       totalBillingHours: 0, 
       totalCompensatedHours: 0,
-      dailyRecords : []
+      dailyRecords : weekdays
     }
   }
 
@@ -26,10 +106,11 @@ class Timesheet extends Component {
       method: 'GET',
       headers: { 'Content-Type': 'application/json',
                  employeeId: 1,
-                 curDate: "2018-03-30"
+                 curDate: this.state.curDate
                 },
     }
     const url = 'timesheet/fetch-weekly-record';
+    console.log(this.state.curDate)
 
     fetch(url, summaryRequest)
       .then(response => response.json())
@@ -56,12 +137,12 @@ class Timesheet extends Component {
 
         <div className="my-4">
           <div className="d-flex justify-content-between px-2">
-            <Calander />
+            <Calander calanderDate={this.state.weekEnding}/>
             <Hours />
           </div>
 
           <div className="my-4">
-            <RecordTable />
+            <RecordTable weekdays={this.state.dailyRecords}/>
           </div>
 
           <div className="my-4">
